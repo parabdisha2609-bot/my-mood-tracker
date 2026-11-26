@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Tracker</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #ffe6f0;
+      padding: 50px;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    h1 { color: #ff69a6; }
+
+    button {
+      padding: 12px;
+      margin: 8px;
+      border: none;
+      border-radius: 12px;
+      background: #ffc6df;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>🌸 My Mood Tracker 🌸</h1>
+    <p>How are you feeling today?</p>
+
+    <button onclick="showMood('Happy')">😊 Happy</button>
+    <button onclick="showMood('Sad')">😔 Sad</button>
+    <button onclick="showMood('Tired')">😴 Tired</button>
+    <button onclick="showMood('Excited')">🤩 Excited</button>
+    <button onclick="showMood('Calm')">😌 Calm</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function showMood(mood) {
+      let messages = {
+       Happy: "Main character energy detected. ✨",
+Sad: "Emotional damage... but make it temporary. 🥲",
+Tired: "Your brain has left the chat. 💤",
+Excited: "Calm down? Never heard of her. 🤩",
+Calm: "Rare moment: no chaos detected. 🍃"
+      };
+
+      document.getElementById("message").innerText =
+        messages[mood];
+    }
+  </script>
+
+</body>
+</html>
